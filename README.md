@@ -1,13 +1,36 @@
 <p align="center">
   <a href="https://docs.turso.tech/sdk/go/quickstart">
-    <img alt="Turso + Go cover" src="https://github.com/tursodatabase/libsql-client-go/assets/950181/d1bf85da-b906-4cbd-8b65-533b1307b4ff" width="1000">
-    <h3 align="center">Turso + Go</h3>
+    <img alt="Turso + Multiple Languages" src="https://github.com/tursodatabase/libsql-client-go/assets/950181/d1bf85da-b906-4cbd-8b65-533b1307b4ff" width="1000">
+    <h3 align="center">libSQL Client Libraries</h3>
   </a>
 </p>
 
 <p align="center">
   SQLite for Production. Powered by <a href="https://turso.tech/libsql">libSQL</a>.
 </p>
+
+## 🌟 Multi-Language Support
+
+This repository now contains client libraries for multiple programming languages:
+
+| Language | Directory | Status | Documentation |
+|----------|-----------|--------|---------------|
+| **Go** | [`go-version/`](./go-version/) | ✅ Stable | [Go SDK Docs](https://docs.turso.tech/sdk/go/quickstart) |
+| **Elixir** | [`elixir-version/`](./elixir-version/) | 🚧 Beta | [Elixir README](./elixir-version/README.md) |
+
+## 🚀 Quick Start
+
+### Go
+```bash
+cd go-version/
+go get github.com/tursodatabase/libsql-client-go/libsql
+```
+
+### Elixir
+```elixir
+# In mix.exs
+{:libsql_client, "~> 0.1.0"}
+```
 
 <p align="center">
   <a href="https://turso.tech"><strong>Turso</strong></a> ·
@@ -28,10 +51,15 @@
 
 ---
 
-## Documentation
+## 📚 Documentation
 
+### General
 1. [Turso Quickstart](https://docs.turso.tech/quickstart) &mdash; Learn how create and connect your first database.
-2. [SDK Quickstart](https://docs.turso.tech/sdk/go/quickstart) &mdash; Learn how to install and execute queries using the libSQL client.
+2. [Development Guide](./DEVELOPMENT_GUIDE.md) &mdash; Technical guide for implementing libSQL clients.
+
+### Language-Specific
+- **Go**: [SDK Quickstart](https://docs.turso.tech/sdk/go/quickstart) &mdash; Official Go SDK documentation
+- **Elixir**: [Elixir README](./elixir-version/README.md) &mdash; Elixir client with Phoenix integration
 
 ### What is Turso?
 
@@ -45,3 +73,45 @@ Learn more about what you can do with Turso:
 - [Branching](https://docs.turso.tech/features/branching)
 - [Point-in-Time Recovery](https://docs.turso.tech/features/point-in-time-recovery)
 - [Scale to Zero](https://docs.turso.tech/features/scale-to-zero)
+
+## 🏗️ Examples
+
+### Go Examples
+- [Counter Example](./go-version/examples/sql/counter/main.go) - Basic usage with transactions
+- [Integration Tests](./go-version/tests/) - Comprehensive test suite
+
+### Elixir Examples  
+- [Basic Usage](./elixir-version/examples/basic_example.exs) - Simple operations and transactions
+- [Phoenix Integration](./elixir-version/examples/phoenix_example.exs) - Full Phoenix/Ecto integration
+
+## 🛠️ Development
+
+See the [Development Guide](./DEVELOPMENT_GUIDE.md) for detailed information about:
+- Protocol implementation (Hrana v1/v2)
+- Architecture patterns
+- Adding new language support
+- Testing strategies
+
+## 🤝 Contributing
+
+We welcome contributions for new language implementations! Each language should:
+
+1. Support the core Hrana protocol
+2. Provide idiomatic APIs for the target language
+3. Include comprehensive tests
+4. Follow the patterns established in existing implementations
+
+## 📁 Repository Structure
+
+```
+├── go-version/           # Original Go implementation
+│   ├── libsql/          # Core library
+│   ├── examples/        # Usage examples
+│   └── tests/           # Test suite
+├── elixir-version/      # Elixir implementation
+│   ├── lib/             # Core library
+│   ├── examples/        # Usage examples
+│   └── test/            # Test suite
+├── DEVELOPMENT_GUIDE.md # Technical implementation guide
+└── README.md           # This file
+```

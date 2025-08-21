@@ -1,16 +1,40 @@
-# Binaries for programs and plugins
+# Go binaries for programs and plugins
 *.exe
 *.exe~
 *.dll
 *.so
 *.dylib
 
-# Test binary, built with `go test -c`
+# Go test binary, built with `go test -c`
 *.test
 
-# Output of the go coverage tool, specifically when used with LiteIDE
+# Go output of the go coverage tool, specifically when used with LiteIDE
 *.out
 
-# Dependency directories (remove the comment below to include it)
+# Go dependency directories (remove the comment below to include it)
 # vendor/
+
+# Elixir compiled beam files
+elixir-version/_build/
+elixir-version/deps/
+elixir-version/doc/
+elixir-version/mix.lock
+
+# Elixir crash dumps
+erl_crash.dump
+
+# Elixir generated on crash by the VM
+erl_crash.dump
+
+# Static artifacts  
+elixir-version/priv/static/
+
+# Database files
 test.db
+*.db
+*.sqlite
+*.sqlite3
+
+# Environment variables
+.env
+.env.local
